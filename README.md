@@ -16,10 +16,10 @@
 
 
 
- ## Route Listing
+ ## Route Listing (BOTH API AND NON-API) [for non API version add @csrf-token to the main title part of the main wrapper HTML or in layouts if you are using laravel]
 
 
-### fetch task data : /fetch-task/{id} (GET)
+### fetch task data : (/api)/fetch-task/{id} (GET)
 
     No Form Data
     
@@ -29,7 +29,7 @@
             data : [JSON.Object]
         }
 
-### get all tasks  : /fetch-all-tasks (GET)
+### get all tasks  : (/api)/fetch-all-tasks (GET)
 
     No Form Data
     
@@ -39,13 +39,13 @@
             data : [JSON.Object] 
         }
         
-### create task : /create-task (POST)
+### create task : (/api)/create-task (POST)
 
      form data : {
          name : [string],
          description : [string],
          completed : [boolean] true/false,
-         expiry : [date.Time.Object],
+         expiry : [date.Time.Object] (yyyy-mm-dd hh:mm:ss),
      }
      
     RETURN : 
@@ -55,13 +55,13 @@
             task : [createdTask.JSON.Object]
         }
 
-### edit task : /edit-task/{id} (POST)
+### edit task : (/api)/edit-task/{id} (PUT)
 
     form data : {
         name : [string],
         description : [string],
         completed : [boolean],
-        expiry : [date.Time.Object], 
+        expiry : [date.Time.Object] (yyyy-mm-dd hh:mm:ss), 
     }
 
     RETURN : 
@@ -71,7 +71,7 @@
             task : [modifiedTask.JSON.Object]
         }
 
-### delete task : /delete-task/{id} (DELETE)
+### delete task : (/api)/delete-task/{id} (DELETE)
 
     No Form Data
 

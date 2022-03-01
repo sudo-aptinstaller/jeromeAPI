@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/fetch-all-tasks', [App\Http\Controllers\TaskController::class, 'fetchTasks']);
+Route::get('/fetch-task/{id}', [App\Http\Controllers\TaskController::class, 'fetchTask']);
+Route::put('/edit-task/{id}', [App\Http\Controllers\TaskController::class, 'editTask']);
+Route::post('/create-task', [App\Http\Controllers\TaskController::class, 'createTask']);
+Route::delete('/delete-task/{id}', [App\Http\Controllers\TaskController::class, 'deleteTask']);
