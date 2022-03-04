@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [App\Http\Controllers\TaskController::class,'index']);
+
 Route::get('/fetch-all-tasks', [App\Http\Controllers\TaskController::class, 'fetchTasks']);
 Route::get('/fetch-task/{id}', [App\Http\Controllers\TaskController::class, 'fetchTask']);
 Route::post('/edit-task/{id}', [App\Http\Controllers\TaskController::class, 'editTask']);

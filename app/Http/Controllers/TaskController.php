@@ -8,6 +8,10 @@ use App\Models\Task;
 
 class TaskController extends Controller
 {
+
+    function index(){
+        return view('welcome');
+    }
     function fetchTasks(){
         $tasks = Task::all();
 
