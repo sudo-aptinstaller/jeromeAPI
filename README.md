@@ -81,3 +81,9 @@
             status : [statusCode],
         }
 
+
+
+
+### How to use the task seeder ?
+
+ - just run ```php artisan db:seed --class=DatabaseSeeder```
